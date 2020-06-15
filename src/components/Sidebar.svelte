@@ -1,5 +1,12 @@
 <script>
   import Profile from './Profile.svelte'
+
+  let selected;
+
+  function handleClick(event) {
+    selected = event.target.id
+  }
+
 </script>
 
 <style>
@@ -31,8 +38,8 @@
 <nav>
   <Profile/>
   <ul>
-    <li>About</li>
-    <li>Projects</li>
-    <li>Contact</li>
+    <li id="about" on:click={handleClick}>About</li>
+    <li id="projects" on:click={handleClick}>Projects</li>
+    <li id="contact" on:click={handleClick}>Contact</li>
   </ul>
 </nav>
