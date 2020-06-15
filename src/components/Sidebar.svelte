@@ -32,7 +32,12 @@
 
   li {
     padding: 1rem;
+    cursor: pointer;
   }  
+
+  li:hover {
+    color:#7f84a3;
+  }
 </style>
 
 <nav>
