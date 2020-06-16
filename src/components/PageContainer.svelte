@@ -19,7 +19,7 @@
 </style>
 
 <section>
-  <About />
+  <About/>
   <Projects />
   <Contact />
 </section>

@@ -4,7 +4,9 @@
   let selected;
 
   function handleClick(event) {
-    selected = event.target.id
+    selected = event.target.innerText.toLowerCase();
+    const element = document.getElementById(selected)
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
 </script>
@@ -38,13 +40,18 @@
   li:hover {
     color:#7f84a3;
   }
+
+  a {
+    text-decoration: none;
+    color: #e2dad8;
+  }
 </style>
 
 <nav>
   <Profile/>
   <ul>
-    <li id="about" on:click={handleClick}>About</li>
-    <li id="projects" on:click={handleClick}>Projects</li>
-    <li id="contact" on:click={handleClick}>Contact</li>
+    <li on:click={handleClick}>About</li>
+    <li on:click={handleClick}>Projects</li>
+    <li on:click={handleClick}>Contact</li>
   </ul>
 </nav>
