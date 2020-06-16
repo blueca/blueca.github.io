@@ -13,7 +13,7 @@
 		grid-template-areas: 
 			". sidebar content";
   }
-	</style>
+</style>
 
 
 <main>
