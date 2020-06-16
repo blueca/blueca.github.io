@@ -15,12 +15,11 @@
     flex-direction: column;
     background-color: #2d356a;
     color: #e2dad8;
-    margin-left: 3vw;
     height: 100%;
-    width: 20%;
     box-shadow: 0 0 4px black;
     align-items: center;
     justify-content: space-evenly;
+    grid-area: sidebar;
   }
 
   ul {
