@@ -1,5 +1,6 @@
 <script>
-  import Sidebar from './components/Sidebar.svelte';
+	import Sidebar from './components/Sidebar.svelte';
+	import PageContainer from './components/PageContainer.svelte'
 </script>
 
 
@@ -11,11 +12,13 @@
 		display: grid;
 		grid-template-columns: 3rem 25rem auto;
 		grid-template-areas: 
-			". sidebar content";
+			". sidebar pageContent";
   }
+
 </style>
 
 
 <main>
 	<Sidebar/>
+	<PageContainer/>
 </main>
