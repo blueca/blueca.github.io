@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: space-evenly;
     grid-area: sidebar;
+    z-index: 10;
   }
 
   ul {
