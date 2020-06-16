@@ -15,7 +15,7 @@
     flex-direction: column;
     background-color: #2d356a;
     color: #e2dad8;
-    height: 100%;
+    height: 100vh;
     box-shadow: 0 0 4px black;
     align-items: center;
     justify-content: space-evenly;

@@ -10,6 +10,7 @@
     width: 100%;
     background-color: yellow;
     grid-area: pageContent;
+    overflow-y: auto;
   }
 
   h2 {
