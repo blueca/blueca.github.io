@@ -8,9 +8,9 @@
   section {
     height: 100%;
     width: 100%;
-    background-color: yellow;
     grid-area: pageContent;
     overflow-y: auto;
+    color: #151522;
   }
 
   h2 {
