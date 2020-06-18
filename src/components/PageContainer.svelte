@@ -12,10 +12,6 @@
     overflow-y: auto;
     color: #151522;
   }
-
-  h2 {
-    text-align: left;
-  }
 </style>
 
 <section>
