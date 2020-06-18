@@ -2,8 +2,9 @@ _Looking for a shareable component template? Go here --> [sveltejs/component-tem
 
 # TODO
 
-- [ ] test
-- [x] test
+- [ ] adjust '>' indicator when scrolling instead of just clicking
+- [ ] animation of '>' indicator when moving between sections
+- [ ] animation of sidebar when moving from/to 'About'
 
 ---
 
