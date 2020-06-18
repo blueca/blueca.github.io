@@ -11,4 +11,7 @@
 
 <section id="about">
   <h2>About</h2>
+  <p>
+    Placeholder info about how great I am.
+  </p>
 </section>
