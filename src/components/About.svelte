@@ -9,7 +9,7 @@
   }
 </style>
 
-<section id="about">
+<section id="about" class="page">
   <h2>About</h2>
   <p>
     Placeholder info about how great I am.

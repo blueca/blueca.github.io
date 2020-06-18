@@ -4,6 +4,6 @@
   }
 </style>
 
-<section id="contact">
+<section id="contact" class="page">
   <h2>Contact</h2>
 </section>

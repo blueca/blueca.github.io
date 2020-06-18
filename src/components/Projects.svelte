@@ -4,6 +4,6 @@
   }
 </style>
 
-<section id="projects">
+<section id="projects" class="page">
   <h2>Projects</h2>
 </section>
