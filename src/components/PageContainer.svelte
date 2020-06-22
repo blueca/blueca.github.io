@@ -1,7 +1,23 @@
 <script>
+  import { onMount } from 'svelte';
   import About from './About.svelte';
   import Projects from './Projects.svelte';
   import Contact from './Contact.svelte';
+
+  
+  
+  onMount(() => {
+    let options = { 
+      threshold: 1
+    };
+    let callback = (entries, observer) => {
+      console.dir(entries)
+    };
+    let observer = new IntersectionObserver(callback, options);
+    let target = document.querySelector('#testing');
+    
+    observer.observe(target);
+  })
 </script>
 
 <style>
@@ -16,6 +32,7 @@
 
 <section>
   <About/>
-  <Projects />
-  <Contact />
+  <Projects/>
+  <p id="testing">testing paragraph</p>
+  <Contact/>
 </section>
