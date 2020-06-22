@@ -1,10 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, createEventDispatcher } from 'svelte';
   import About from './About.svelte';
   import Projects from './Projects.svelte';
   import Contact from './Contact.svelte';
 
   export let selected;
+
+  const dispatch = createEventDispatcher();
   
   onMount(() => {
     let options = { 
@@ -12,9 +14,12 @@
     };
     let callback = (entries, observer) => {
       if (entries.length === 1 && entries[0].target.id !== selected) {
-        selected = entries[0].target.id
+        const page = entries[0].target.id
+
+        dispatch('message', {
+          text: page
+        })
       }
-      console.log(selected)
     };
     let observer = new IntersectionObserver(callback, options);
     let about = document.querySelector('#about');
