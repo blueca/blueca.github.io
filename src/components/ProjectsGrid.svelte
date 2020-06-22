@@ -6,10 +6,11 @@
 <style>
   #grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 600px));
     gap: 2rem;
     width: 95%;
     margin: auto;
+    justify-content: center;
   }
 </style>
 

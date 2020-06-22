@@ -11,6 +11,7 @@
     box-shadow: 0 0 4px black;
     border-radius: 2px;
     height: 20rem;
+    width: auto;
   }
 </style>
 
