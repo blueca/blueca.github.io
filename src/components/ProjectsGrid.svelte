@@ -1,5 +1,6 @@
 <script>
-  import ProjectCard from './ProjectCard.svelte'
+  import ProjectCard from './ProjectCard.svelte';
+  import { projects } from '../repos.js';
 </script>
 
 <style>
@@ -13,7 +14,7 @@
 </style>
 
 <div id="grid">
-  <ProjectCard />
-  <ProjectCard />
-  <ProjectCard />
+  {#each projects as project}
+    <ProjectCard {...project}/>
+  {/each}
 </div>
