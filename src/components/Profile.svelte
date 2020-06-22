@@ -2,7 +2,7 @@
   img {
     width: 70%;
     border-radius: 100%;
-    box-shadow: 0 0 6px black;
+    box-shadow: 0 0 4px black;
   }
 
   #name {
