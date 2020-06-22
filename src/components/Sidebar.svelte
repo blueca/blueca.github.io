@@ -1,12 +1,17 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   import Profile from './Profile.svelte'
 
-  let selected = 'about';
+  export let selected;
+
+  const dispatch = createEventDispatcher();
 
   function handleClick(event) {
-    selected = event.target.id.toLowerCase();
-    const element = document.getElementById(selected)
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const page = event.target.id.toLowerCase();
+
+    dispatch('message', {
+      text: page
+    })
   }
 </script>
 

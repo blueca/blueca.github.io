@@ -4,19 +4,26 @@
   import Projects from './Projects.svelte';
   import Contact from './Contact.svelte';
 
-  
+  export let selected;
   
   onMount(() => {
     let options = { 
-      threshold: 1
+      threshold: 0.51
     };
     let callback = (entries, observer) => {
-      console.dir(entries)
+      if (entries.length === 1 && entries[0].target.id !== selected) {
+        selected = entries[0].target.id
+      }
+      console.log(selected)
     };
     let observer = new IntersectionObserver(callback, options);
-    let target = document.querySelector('#testing');
-    
-    observer.observe(target);
+    let about = document.querySelector('#about');
+    let projects = document.querySelector('#projects');
+    let contact = document.querySelector('#contact');
+
+    observer.observe(about);
+    observer.observe(projects);
+    observer.observe(contact);
   })
 </script>
 
@@ -33,6 +40,5 @@
 <section>
   <About/>
   <Projects/>
-  <p id="testing">testing paragraph</p>
   <Contact/>
 </section>
