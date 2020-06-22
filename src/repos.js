@@ -1,9 +1,9 @@
 export const projects = [
   {
     title: 'Keeper',
-    image: 'placeholder',
+    image: 'https://via.placeholder.com/1000x450.png?text=placeholder+image',
     description:
-      'A cross platform productivity/goal keeping app, utilising gamification to encourage users to stick with their goals',
+      'A cross platform productivity/goal keeping app, utilising gamification to encourage users to stick with their goals.',
     tech: {
       frontend: ['Dart', 'Flutter', 'Spritewidget'],
       backend: ['Firebase', 'Node.js'],
@@ -15,8 +15,8 @@ export const projects = [
   },
   {
     title: 'News-AG',
-    image: 'placeholder',
-    description: 'A fullstack news/article aggregator',
+    image: 'https://via.placeholder.com/1000x450.png?text=placeholder+image',
+    description: 'A fullstack news/article aggregator.',
     tech: {
       frontend: ['React', 'Styled-Components', 'JavaScript', 'HTML', 'CSS'],
       backend: ['Node.js', 'Express', 'PostgreSQL', 'Knex'],
@@ -28,8 +28,8 @@ export const projects = [
   },
   {
     title: 'Portfolio Website',
-    image: 'placeholder',
-    description: 'placeholder',
+    image: 'https://via.placeholder.com/1000x450.png?text=placeholder+image',
+    description: "The website you're currently viewing.",
     tech: {
       frontend: ['Svelte', 'JavaScript'],
       backend: [],
