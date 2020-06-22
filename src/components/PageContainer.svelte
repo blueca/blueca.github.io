@@ -13,13 +13,14 @@
       threshold: 0.51
     };
     let callback = (entries, observer) => {
-      if (entries.length === 1 && entries[0].target.id !== selected) {
-        const page = entries[0].target.id
-
-        dispatch('message', {
-          text: page
-        })
-      }
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.id !== selected) {
+          const page = entries[0].target.id
+          dispatch('message', {
+            text: page
+          })
+        }
+      })
     };
     let observer = new IntersectionObserver(callback, options);
     let about = document.querySelector('#about');
