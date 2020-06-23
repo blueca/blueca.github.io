@@ -34,16 +34,42 @@
     padding-left: 0.6rem;
   }
 
-  #frontend {
+  .techlist {
     display: flex;
+    width: 97%;
+    margin: auto;
+    height: 3rem;
   }
-  #backend {
-    display: flex;
+
+  .type {
+    background-color: #e2dad8;
+    color: #151522;
+    padding: 0.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0;
+    width: 6rem;
+    border-radius: 2px;
   }
 
   ul {
     display: flex;
     list-style-type: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 0.5rem;
+    margin: 0;
+  }
+
+  li {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #151522;
+    color: #e2dad8;
+    padding: 0.5rem;
+    margin: 0 0.2rem;
+    border-radius: 2px;
   }
 </style>
 
@@ -51,8 +77,8 @@
   <img src="{image}" alt="{title}" />
   <div id="tech">
     {#if tech.frontend.length > 0}
-    <div id="frontend">
-      <p>Frontend</p>
+    <div class="techlist">
+      <p class="type">Frontend</p>
       <ul>
         {#each frontend as tech}
         <li>{tech}</li>
@@ -60,8 +86,8 @@
       </ul>
     </div>
     {/if} {#if tech.backend.length > 0}
-    <div id="backend">
-      <p>Backend</p>
+    <div class="techlist">
+      <p class="type">Backend</p>
       <ul>
         {#each backend as tech}
         <li>{tech}</li>
