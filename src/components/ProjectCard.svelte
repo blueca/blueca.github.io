@@ -21,7 +21,7 @@
   img {
     width: 97%;
     margin-top: 0.5rem;
-    border-radius: 2px 2px 0 0;
+    border-radius: 2px;
   }
 
   h3 {
@@ -47,8 +47,9 @@
     padding: 0.5rem;
     height: 1.5rem;
     line-height: 1.5rem;
+    text-align: center;
     margin: 0;
-    width: 6rem;
+    width: 5rem;
     border-radius: 2px;
   }
 
