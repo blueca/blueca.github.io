@@ -51,6 +51,7 @@
     margin: 0;
     width: 5rem;
     border-radius: 2px;
+    cursor: default;
   }
 
   ul {
@@ -71,6 +72,11 @@
     padding: 0.5rem;
     margin: 0 0.2rem;
     border-radius: 2px;
+    cursor: default;
+  }
+
+  h3 {
+    margin: 0;
   }
 </style>
 
