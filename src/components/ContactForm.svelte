@@ -30,8 +30,12 @@
     color: #e2dad8;
   }
 
-  input:focus {
-    font-size: 1rem;
+  ::placeholder {
+    color: #c2bab8;
+  }
+
+  input:focus::placeholder {
+    color: #e2dad8;
   }
 
   textarea {
@@ -47,8 +51,8 @@
     color: #e2dad8;
   }
 
-  textarea:focus {
-    font-size: 1rem;
+  textarea:focus::placeholder {
+    color: #e2dad8;
   }
 
   button {
@@ -56,10 +60,6 @@
     background-color: #e2dad8;
     border: 1px solid black;
     border-radius: 2px;
-  }
-
-  ::placeholder {
-    color: #c2bab8;
   }
 </style>
 
