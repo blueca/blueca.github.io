@@ -1,4 +1,7 @@
 <script>
+  import { slide } from 'svelte/transition';
+  import { quintInOut } from 'svelte/easing';
+
   export let title;
   export let image;
   export let description;
@@ -6,10 +9,10 @@
   export let repo;
 
   const { frontend, backend } = tech;
-  let expanded = false;
+  let visible = true;
 
   function handleClick() {
-    expanded = !expanded;
+    visible = !visible;
   }
 </script>
 
@@ -31,6 +34,7 @@
 
   img {
     width: 97%;
+    height: 50%;
     margin-top: 0.5rem;
     border-radius: 2px;
   }
@@ -103,31 +107,38 @@
 </style>
 
 <div class="card" on:click="{handleClick}">
-  {#if !expanded}
-  <img id="image" src="{image}" alt="{title}" />
+  {#if visible}
+  <img
+    id="image"
+    src="{image}"
+    alt="{title}"
+    transition:slide="{{easing: quintInOut}}"
+  />
   {/if}
-  <div id="tech">
-    {#if tech.frontend.length > 0}
-    <div class="techlist">
-      <p class="type">Frontend</p>
-      <ul>
-        {#each frontend as tech}
-        <li>{tech}</li>
-        {/each}
-      </ul>
+  <div>
+    <div id="tech">
+      {#if tech.frontend.length > 0}
+      <div class="techlist">
+        <p class="type">Frontend</p>
+        <ul>
+          {#each frontend as tech}
+          <li>{tech}</li>
+          {/each}
+        </ul>
+      </div>
+      {/if} {#if tech.backend.length > 0}
+      <div class="techlist">
+        <p class="type">Backend</p>
+        <ul>
+          {#each backend as tech}
+          <li>{tech}</li>
+          {/each}
+        </ul>
+      </div>
+      {/if}
     </div>
-    {/if} {#if tech.backend.length > 0}
-    <div class="techlist">
-      <p class="type">Backend</p>
-      <ul>
-        {#each backend as tech}
-        <li>{tech}</li>
-        {/each}
-      </ul>
-    </div>
-    {/if}
+    <h3>{title}</h3>
+    <p>{description}</p>
   </div>
-  <h3>{title}</h3>
-  <p>{description}</p>
   <div class="arrow"></div>
 </div>
