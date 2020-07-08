@@ -6,6 +6,11 @@
   export let repo;
 
   const { frontend, backend } = tech;
+  let expanded = false;
+
+  function handleClick() {
+    expanded = !expanded;
+  }
 </script>
 
 <style>
@@ -16,6 +21,12 @@
     width: auto;
     background-color: #2d356a;
     color: #e2dad8;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .card:hover > .arrow {
+    padding: 0.4rem;
   }
 
   img {
@@ -32,12 +43,13 @@
   p {
     text-align: left;
     padding-left: 0.6rem;
+    margin: 0.5rem 0;
   }
 
   .techlist {
     display: flex;
     width: 97%;
-    margin: auto;
+    margin: 0.5rem auto auto auto;
     height: 3rem;
   }
 
@@ -51,7 +63,6 @@
     margin: 0;
     width: 5rem;
     border-radius: 2px;
-    cursor: default;
   }
 
   ul {
@@ -72,16 +83,29 @@
     padding: 0.5rem;
     margin: 0 0.2rem;
     border-radius: 2px;
-    cursor: default;
   }
 
   h3 {
     margin: 0;
   }
+
+  .arrow {
+    border: solid #e2dad8;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 0.3rem;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    position: absolute;
+    bottom: 0.5rem;
+    margin: auto;
+  }
 </style>
 
-<div class="card">
-  <img src="{image}" alt="{title}" />
+<div class="card" on:click="{handleClick}">
+  {#if !expanded}
+  <img id="image" src="{image}" alt="{title}" />
+  {/if}
   <div id="tech">
     {#if tech.frontend.length > 0}
     <div class="techlist">
@@ -105,4 +129,5 @@
   </div>
   <h3>{title}</h3>
   <p>{description}</p>
+  <div class="arrow"></div>
 </div>
