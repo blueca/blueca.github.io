@@ -11,8 +11,10 @@
   const { frontend, backend } = tech;
   let visible = true;
 
-  function handleClick() {
-    visible = !visible;
+  function handleClick(event) {
+    if (event.target.type !== 'button') {
+      visible = !visible;
+    }
   }
 </script>
 
@@ -104,6 +106,27 @@
     bottom: 0.5rem;
     margin: auto;
   }
+
+  a {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background-color: green;
+    color: #e2dad8;
+    padding: 0.5rem;
+    margin: 0 0.2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    box-shadow: 0 0 2px black;
+  }
+
+  a:hover {
+    box-shadow: 0 0 4px black;
+    background-color: rgb(2, 107, 2);
+  }
+
+  a:active {
+    box-shadow: 0 0 2px white;
+  }
 </style>
 
 <div class="card" on:click="{handleClick}">
@@ -139,6 +162,25 @@
     </div>
     <h3>{title}</h3>
     <p>{description}</p>
+    {#if !visible}
+    <h4 transition:slide="{{easing: quintInOut}}">Repo</h4>
+    {#if repo.frontend}
+    <a
+      type="button"
+      href="{repo.frontend}"
+      target="_blank"
+      transition:slide="{{easing: quintInOut}}"
+      >Frontend</a
+    >
+    {/if} {#if repo.backend}
+    <a
+      type="button"
+      href="{repo.backend}"
+      target="_blank"
+      transition:slide="{{easing: quintInOut}}"
+      >Backend</a
+    >
+    {/if} {/if}
   </div>
   <div class="arrow"></div>
 </div>
