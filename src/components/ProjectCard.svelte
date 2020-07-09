@@ -7,6 +7,7 @@
   export let description;
   export let tech;
   export let repo;
+  export let demo;
 
   const { frontend, backend } = tech;
   let visible = true;
@@ -51,7 +52,7 @@
   p {
     text-align: left;
     padding-left: 0.6rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 2rem 0;
   }
 
   .techlist {
@@ -111,12 +112,10 @@
     background-color: green;
     color: #e2dad8;
     padding: 0.5rem 0.5rem 0.5rem 0.6rem;
-    /* margin: 1rem 0.2rem; */
     border-radius: 2px;
     text-decoration: none;
     box-shadow: 0 0 2px black;
-    /* padding-left: 0.6rem; */
-    margin: 0.5rem 0.6rem 0.5rem 0;
+    margin: 0.5rem 0.6rem 1rem 0;
   }
 
   a:hover {
@@ -128,7 +127,8 @@
     box-shadow: 0 0 2px white;
   }
 
-  #repolinks {
+  #repolinks,
+  #demolinks {
     display: flex;
     justify-content: left;
     width: 97%;
@@ -190,7 +190,38 @@
       >
       {/if}
     </div>
-    {/if}
+    {#if Object.keys(demo).length > 0}
+    <div>
+      <h4 transition:slide="{{easing: quintInOut}}">Demo</h4>
+      <div id="demolinks">
+        {#if demo.frontend}
+        <a
+          type="button"
+          href="{demo.frontend}"
+          target="_blank"
+          transition:slide="{{easing: quintInOut}}"
+          >Live Frontend</a
+        >
+        {/if} {#if demo.backend}
+        <a
+          type="button"
+          href="{demo.backend}"
+          target="_blank"
+          transition:slide="{{easing: quintInOut}}"
+          >Live Backend</a
+        >
+        {/if} {#if demo.video}
+        <a
+          type="button"
+          href="{demo.video}"
+          target="_blank"
+          transition:slide="{{easing: quintInOut}}"
+          >Video</a
+        >
+        {/if}
+      </div>
+    </div>
+    {/if} {/if}
   </div>
   <div class="arrow"></div>
 </div>
