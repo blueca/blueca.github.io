@@ -41,9 +41,11 @@
     border-radius: 2px;
   }
 
-  h3 {
+  h3,
+  h4 {
     text-align: left;
     padding-left: 0.6rem;
+    margin: 0;
   }
 
   p {
@@ -91,10 +93,6 @@
     border-radius: 2px;
   }
 
-  h3 {
-    margin: 0;
-  }
-
   .arrow {
     border: solid #e2dad8;
     border-width: 0 3px 3px 0;
@@ -112,11 +110,13 @@
     line-height: 1.5rem;
     background-color: green;
     color: #e2dad8;
-    padding: 0.5rem;
-    margin: 0 0.2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+    /* margin: 1rem 0.2rem; */
     border-radius: 2px;
     text-decoration: none;
     box-shadow: 0 0 2px black;
+    /* padding-left: 0.6rem; */
+    margin: 0.5rem 0.6rem 0.5rem 0;
   }
 
   a:hover {
@@ -126,6 +126,13 @@
 
   a:active {
     box-shadow: 0 0 2px white;
+  }
+
+  #repolinks {
+    display: flex;
+    justify-content: left;
+    width: 97%;
+    margin: 0.5rem auto auto auto;
   }
 </style>
 
@@ -164,23 +171,26 @@
     <p>{description}</p>
     {#if !visible}
     <h4 transition:slide="{{easing: quintInOut}}">Repo</h4>
-    {#if repo.frontend}
-    <a
-      type="button"
-      href="{repo.frontend}"
-      target="_blank"
-      transition:slide="{{easing: quintInOut}}"
-      >Frontend</a
-    >
-    {/if} {#if repo.backend}
-    <a
-      type="button"
-      href="{repo.backend}"
-      target="_blank"
-      transition:slide="{{easing: quintInOut}}"
-      >Backend</a
-    >
-    {/if} {/if}
+    <div id="repolinks">
+      {#if repo.frontend}
+      <a
+        type="button"
+        href="{repo.frontend}"
+        target="_blank"
+        transition:slide="{{easing: quintInOut}}"
+        >Frontend</a
+      >
+      {/if} {#if repo.backend}
+      <a
+        type="button"
+        href="{repo.backend}"
+        target="_blank"
+        transition:slide="{{easing: quintInOut}}"
+        >Backend</a
+      >
+      {/if}
+    </div>
+    {/if}
   </div>
   <div class="arrow"></div>
 </div>
