@@ -115,7 +115,7 @@
     border-radius: 2px;
     text-decoration: none;
     box-shadow: 0 0 2px black;
-    margin: 0.5rem 0.6rem 1rem 0;
+    margin: 0.5rem 0.6rem 2rem 0;
   }
 
   a:hover {
