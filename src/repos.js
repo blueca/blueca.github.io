@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'Keeper',
-    image: 'https://via.placeholder.com/1000x450.png?text=placeholder+image',
+    image: 'images/1000x450.png',
     description:
       'A cross platform productivity/goal keeping app, utilising gamification to encourage users to stick with their goals.',
     tech: {
@@ -12,10 +12,13 @@ export const projects = [
       frontend: 'https://github.com/blueca/keeper',
       backend: 'https://github.com/blueca/keeper-cloud-functions',
     },
+    demo: {
+      video: 'https://www.youtube.com/watch?v=gg07TuJgry8',
+    },
   },
   {
     title: 'News-AG',
-    image: 'https://via.placeholder.com/1000x450.png?text=placeholder+image',
+    image: 'images/1000x450.png',
     description: 'A fullstack news/article aggregator.',
     tech: {
       frontend: ['React', 'Styled-Components', 'JavaScript', 'HTML', 'CSS'],
@@ -25,10 +28,14 @@ export const projects = [
       frontend: 'https://github.com/blueca/fe-news-ag',
       backend: 'https://github.com/blueca/be-news-ag',
     },
+    demo: {
+      frontend: 'https://news-ag.netlify.app/',
+      backend: 'https://nicks-nc-news.herokuapp.com/api',
+    },
   },
   {
     title: 'Portfolio Website',
-    image: 'https://via.placeholder.com/1000x450.png?text=placeholder+image',
+    image: 'images/1000x450.png',
     description: "The website you're currently viewing.",
     tech: {
       frontend: ['Svelte', 'JavaScript'],
@@ -37,5 +44,6 @@ export const projects = [
     repo: {
       frontend: 'https://github.com/blueca/portfolio-website',
     },
+    demo: {},
   },
 ];
