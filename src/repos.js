@@ -3,7 +3,7 @@ export const projects = [
     title: 'Keeper',
     image: 'images/keeper.png',
     description:
-      'A cross platform productivity/goal keeping app, utilising gamification to encourage users to stick with their goals.',
+      'A cross platform productivity/goal keeping app for Android and iOS, utilising gamification to encourage users to stick with their goals.',
     tech: {
       frontend: ['Dart', 'Flutter', 'Spritewidget'],
       backend: ['Firebase', 'Node.js'],
