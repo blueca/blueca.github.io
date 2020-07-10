@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'Keeper',
-    image: 'images/1000x450.png',
+    image: 'images/keeper.png',
     description:
       'A cross platform productivity/goal keeping app, utilising gamification to encourage users to stick with their goals.',
     tech: {
@@ -18,7 +18,7 @@ export const projects = [
   },
   {
     title: 'News-AG',
-    image: 'images/1000x450.png',
+    image: 'images/news-ag.png',
     description: 'A fullstack news/article aggregator.',
     tech: {
       frontend: ['React', 'Styled-Components', 'JavaScript', 'HTML', 'CSS'],
@@ -35,7 +35,7 @@ export const projects = [
   },
   {
     title: 'Portfolio Website',
-    image: 'images/1000x450.png',
+    image: 'images/portfolio.png',
     description: "The website you're currently viewing.",
     tech: {
       frontend: ['Svelte', 'JavaScript'],
