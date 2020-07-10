@@ -40,6 +40,7 @@
     height: 50%;
     margin-top: 0.5rem;
     border-radius: 2px;
+    box-shadow: 0 0 4px black;
   }
 
   h3,
