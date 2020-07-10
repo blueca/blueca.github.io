@@ -15,6 +15,7 @@
   }
 </script>
 
+
 <style>
   nav {
     display: flex;
@@ -51,20 +52,16 @@
     color: #e2dad8;
   }
 
-  div {
-    display: flex;
-  }
-
   .active {
     list-style-type: '>';
   }
 </style>
 
 <nav>
-  <Profile/>
-    <ul>
-      <li id="ABOUT" class:active="{selected === 'about'}" on:click={handleClick}>About</li>
-      <li id="PROJECTS" class:active="{selected === 'projects'}" on:click={handleClick}>Projects</li>
-      <li id="CONTACT" class:active="{selected === 'contact'}" on:click={handleClick}>Contact</li>
-    </ul>
+  <Profile />
+  <ul>
+    <li id="ABOUT" class:active="{selected === 'about'}" on:click={handleClick}>About</li>
+    <li id="PROJECTS" class:active="{selected === 'projects'}" on:click={handleClick}>Projects</li>
+    <li id="CONTACT" class:active="{selected === 'contact'}" on:click={handleClick}>Contact</li>
+  </ul>
 </nav>
