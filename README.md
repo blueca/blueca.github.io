@@ -2,8 +2,12 @@ _Looking for a shareable component template? Go here --> [sveltejs/component-tem
 
 # TODO
 
-- [ ] animation of '>' indicator when moving between sections
+- [ ] animation of '>' indicator when moving between sections, still not 100% reliable
 - [ ] animation of sidebar when moving from/to 'About'
+- [ ] card animations going out of bounds of the card
+- [ ] add noise texture
+- [ ] make mobile friendly
+- [ ] move name/pic etc from sidebar to 'About'
 
 ---
 
