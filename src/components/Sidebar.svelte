@@ -1,6 +1,5 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import Profile from './Profile.svelte'
 
   export let selected;
 
@@ -10,11 +9,10 @@
     const page = event.target.id.toLowerCase();
 
     dispatch('message', {
-      text: page
-    })
+      text: page,
+    });
   }
 </script>
-
 
 <style>
   nav {
@@ -42,10 +40,10 @@
     list-style-type: none;
     padding: 1rem 0;
     cursor: pointer;
-  }  
+  }
 
   li:hover {
-    color:#7f84a3;
+    color: #7f84a3;
   }
 
   a {
@@ -59,10 +57,27 @@
 </style>
 
 <nav>
-  <Profile />
   <ul>
-    <li id="ABOUT" class:active="{selected === 'about'}" on:click={handleClick}>About</li>
-    <li id="PROJECTS" class:active="{selected === 'projects'}" on:click={handleClick}>Projects</li>
-    <li id="CONTACT" class:active="{selected === 'contact'}" on:click={handleClick}>Contact</li>
+    <li
+      id="ABOUT"
+      class:active="{selected === 'about'}"
+      on:click="{handleClick}"
+    >
+      About
+    </li>
+    <li
+      id="PROJECTS"
+      class:active="{selected === 'projects'}"
+      on:click="{handleClick}"
+    >
+      Projects
+    </li>
+    <li
+      id="CONTACT"
+      class:active="{selected === 'contact'}"
+      on:click="{handleClick}"
+    >
+      Contact
+    </li>
   </ul>
 </nav>
