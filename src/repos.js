@@ -23,7 +23,7 @@ export const projects = [
     description:
       'A fullstack news/article aggregator with functionality inspired by Reddit. Users can sign in to a dummy account, which allows them to submit or delete their own comments as well as vote on other submissions.',
     tech: {
-      frontend: ['React', 'Styled-Components', 'JavaScript', 'HTML', 'CSS'],
+      frontend: ['React', 'JavaScript', 'HTML', 'CSS'],
       backend: ['Node.js', 'Express', 'PostgreSQL', 'Knex'],
       technology: [],
     },
