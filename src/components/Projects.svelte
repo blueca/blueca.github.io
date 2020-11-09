@@ -5,7 +5,6 @@
 <style>
   section {
     min-height: 100vh;
-    max-height: auto;
   }
 </style>
 

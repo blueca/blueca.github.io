@@ -12,7 +12,7 @@
 </script>
 <style>
   section {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 1rem;
   }
 
@@ -22,6 +22,7 @@
 
   p {
     /* border: black solid 2px; */
+    padding-top: 1rem;
     width: 75%;
     margin: auto;
   }
@@ -32,10 +33,6 @@
 
   #intro {
     font-size: 20px;
-  }
-
-  #more {
-    padding-top: 1rem;
   }
 
   .arrow {
