@@ -29,6 +29,12 @@
     z-index: 10;
   }
 
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+  }
+
   ul {
     padding: 0;
     margin: 0;

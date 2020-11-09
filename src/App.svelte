@@ -30,6 +30,19 @@
     grid-template-areas: 
       ". sidebar pageContent";
   }
+
+  @media (max-width: 1024px) {
+    main {
+      grid-template-columns: 22rem auto;
+      grid-template-areas: "sidebar pageContent";
+    }
+  }
+
+  @media (max-width: 768px) {
+    main {
+      display: block;
+    }
+  }
 </style>
 
 <main>
