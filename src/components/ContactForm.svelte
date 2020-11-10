@@ -15,6 +15,12 @@
     /* box-shadow: 0 0 4px black; */
   }
 
+  @media (max-width: 768px) {
+    form {
+      width: 80%;
+    }
+  }
+
   label {
     align-self: flex-start;
   }
