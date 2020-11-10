@@ -8,11 +8,7 @@
     flex-direction: column;
     width: 50%;
     height: 20rem;
-    /* background-color: #2d356a; */
     padding: 2rem;
-    /* color: #e2dad8; */
-    /* border-radius: 2px; */
-    /* box-shadow: 0 0 4px black; */
   }
 
   @media (max-width: 768px) {
@@ -33,7 +29,6 @@
     border: 2px solid black;
     border-radius: 5px;
     font-size: 0.8rem;
-    /* color: #e2dad8; */
   }
 
   ::placeholder {

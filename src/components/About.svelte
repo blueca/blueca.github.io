@@ -27,7 +27,6 @@
   }
 
   p {
-    /* border: black solid 2px; */
     padding-top: 1rem;
     width: 75%;
     margin: auto;
@@ -58,15 +57,11 @@
   #close {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
-    /* position: absolute; */
-    /* bottom: 0.5rem; */
   }
 
   #open {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    /* position: absolute; */
-    /* bottom: 0.5rem; */
   }
 
   .expand {
