@@ -32,6 +32,14 @@
     position: relative;
   }
 
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+      height:auto;
+      margin: auto;
+    }
+  }
+
   .card:hover > .arrow {
     padding: 0.4rem;
   }
@@ -62,6 +70,16 @@
     width: 97%;
     margin: 0.5rem auto auto auto;
     height: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .techlist > p {
+      font-size: 0.8rem;
+    }
+
+    .techlist > ul {
+      font-size: 0.8rem;
+    }
   }
 
   .type {
