@@ -1,6 +1,6 @@
 <style>
   img {
-    width: 20%;
+    width: 250px;
     border-radius: 100%;
     box-shadow: 0 0 4px black;
   }
