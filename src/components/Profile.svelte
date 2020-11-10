@@ -18,7 +18,7 @@
 </style>
 
 <section>
-  <img src="images/photo-placeholder.png" alt="Nick Oldacre" />
+  <img src="images/nick.jpg" alt="Nick Oldacre" />
   <p id="name">Nick Oldacre</p>
   <p id="title">Software Developer</p>
 </section>
