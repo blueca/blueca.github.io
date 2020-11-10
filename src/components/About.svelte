@@ -16,6 +16,12 @@
     padding-top: 1rem;
   }
 
+  @media (max-width: 768px) {
+    section {
+      min-height: 75vh;
+    }
+  }
+
   h2 {
     margin-top: 0;
   }
