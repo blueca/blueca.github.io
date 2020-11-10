@@ -53,7 +53,7 @@ export const projects = [
   },
   {
     title: 'CLI BitTorrent Client',
-    image: 'images/portfolio.png',
+    image: 'images/torrent.png',
     description:
       'A simple BitTorrent client and my first real attempt at using TypeScript. An interesting excercise in using sockets and working with buffers for sending and receiving data.',
     tech: {
